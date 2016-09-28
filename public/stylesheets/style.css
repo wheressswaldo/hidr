@@ -1,0 +1,54 @@
+/* Move down content because we have a fixed navbar that is 50px tall plus padding*/
+body {
+	padding-top: 120px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+h1 {
+	padding: 50px 15px;
+	text-align: center;
+	font-size: 36px;
+}
+
+input[type = submit]{
+	border-color: #333;
+	background-color: #66CC99;
+	color: #FFFFFF;
+	width: 100px;
+	height: 30px;
+}
+
+input[type = file]{
+	display: inline-block;
+	width: 175px;
+}
+
+.navbar-inverse {
+	background-color: #333;
+	border-color: #333;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+}
+
+.navbar-inverse .navbar-brand{
+	color: #66CC99;
+	letter-spacing: 2px;
+	font-weight: 500;
+	font-size: 25px;
+	text-align: center;
+}
+
+
+.tainer {
+	padding-top: 20px;
+	text-align: center;
+}
+
+form{
+	margin: 0 auto;
+	width: 500px;
+}
+

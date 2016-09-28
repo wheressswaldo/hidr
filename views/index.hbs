@@ -1,0 +1,136 @@
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    	<div class="container">
+    		<div class="navbar-header">
+    			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+    				<i class="fa fa-bars"></i>
+    			</button>
+    			<a class="navbar-brand page-scroll" href="#page-top">
+    				HIDR <span class="beta">(beta)</span>
+    			</a>
+    		</div>
+
+    		<!-- Collect the nav links, forms, and other content for toggling -->
+    		<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+    			<ul class="nav navbar-nav">
+    				<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+    				<li class="hidden">
+    					<a href="#page-top"></a>
+    				</li>
+    				<li>
+    					<a class="page-scroll" href="#encode">ENCODER</a>
+    				</li>
+                    <!-- <li>
+                        <a class="page-scroll" href="#password">PASSWORD</a>
+                    </li> -->
+                    <li>
+                    	<a class="page-scroll" href="#decode">DECODER</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+    	<div class="intro-body">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-8 col-md-offset-2">
+    					<h1 class="brand-heading">HIDR</h1>
+    					<p class="intro-text">A simple, intuitive file hiding service.<br>Created for #GoogleIdeas #hack4humanity.</p>
+    					<a href="#encode" class="btn btn-circle page-scroll">
+    						<i class="fa fa-angle-double-down animated"></i>
+    					</a>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </header>
+
+    <!-- Encode Section -->
+    <section id="encode" class="container content-section text-center">
+    	<div class="row">
+    		<div class="col-lg-8 col-lg-offset-2">
+    			<h2>ENCODER</h2>
+
+    			<form class="form-horizontal" id="hideform" method="POST" action="/encode" enctype="multipart/form-data">
+    				<div class="control-group">
+    					<div class="fileUpload btn btn-primary">
+    						<span><i class="fa fa-file-o"></i> Base File</span><br />
+    						<input name="baseFile" type="file" id="uploadBaseBtn" class="upload" />
+    					</div>
+    					<br />
+    					<span id="uploadBaseFile">Select file that anyone can see (pdf or 3 letter extension image)</span>
+    					<!-- <input id="uploadBaseFile" placeholder="Base File" disabled="disabled" /> -->
+    					<br />
+    				</div>
+    				<br />
+    				<div class="control-group">
+    					<div class="fileUpload btn btn-primary">
+    						<span><i class="fa fa-file-o"></i> Hide File</span><br />
+    						<input name="hideFile" id="uploadHideBtn" type="file" class="upload" />
+    					</div>
+    					<br />
+    					<span id="uploadHideFile">Select file you want to hide (any type of file)</span>
+    					<!-- <input id="uploadHideFile" placeholder="Hide This File" disabled="disabled" /> -->
+    				</div>
+    				<br />
+    				<div class="control-group">
+    					<div class="fileUpload btn btn-primary password">
+    						<span class="pass"><i class="fa fa-key"></i> Password</span><br />
+    						<input name="passButton" type="text" id="passBtn" class="upload pass" />
+    					</div>
+    					<br />
+    					<input class="pbox" name="password" type="password" id="uploadHidePassword" placeholder="Enter Password"/>
+    				</div>   					
+    				<br /><br />
+    				<div class="control-group">
+    					<div class="controls">
+    						<input type="submit" value="ENCODE" class="btn btn-default btn-lg">
+    					</div>
+    				</div>
+    			</form>
+    		</div>
+    	</div>
+    </section>
+
+    <!-- Decode Section -->
+    <section id="decode" class="container content-section text-center">
+    	<div class="row">
+    		<div class="col-lg-8 col-lg-offset-2">
+    			<h2>DECODER</h2>
+
+    			<form class="form-horizontal" id="hideform" method="POST" action="/decode" enctype="multipart/form-data">
+    				<div class="control-group">
+    					<div class="fileUpload btn btn-primary">
+    						<span><i class="fa fa-lock"></i> Encoded File</span><br />
+    						<input name="encodedFile" type="file" id="uploadEncodedBtn" class="upload" />
+    					</div>
+    					<br />
+    					<span id="uploadEncodedFile">Select encoded file you want to decode</span>
+    					<!-- <input id="uploadEncodedFile" placeholder="Encoded File" disabled="disabled" /> -->
+    					<br />
+    				</div>
+    				<br />
+    				<div class="control-group">
+    					<div class="fileUpload btn btn-primary password">
+    						<span class="pass"><i class="fa fa-key"></i> Password</span><br />
+    						<input name="passwordButton" type="text" id="passwordBtn" class="upload pass" />
+    					</div>
+    					<br />
+    					<input class="pbox" name="password" type="password" id="uploadEncodedPassword" placeholder="Enter Password"/>
+    				</div>   					
+    				<br /><br />
+    				<div class="control-group">
+    					<div class="controls">
+    						<input type="submit" value="DECODE" class="btn btn-default btn-lg">
+    					</div>
+    				</div>
+    			</form>
+    		</div>
+    	</div>
+    </section>
+    
